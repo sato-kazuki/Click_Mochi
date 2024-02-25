@@ -10,11 +10,11 @@ using UnityEngine;
 /// <typeparam name="T"></typeparam>
 public abstract class SingletonBase<T> : MonoBehaviour where T : MonoBehaviour
 {
-    protected abstract bool dontDestroyOnLoad { get; }
+    public abstract bool dontDestroyOnLoad { get; }
 
     private static T instance;
 
-    [Obsolete]
+    
     public static T Instance
     {
         get
@@ -32,7 +32,7 @@ public abstract class SingletonBase<T> : MonoBehaviour where T : MonoBehaviour
         }
     }
 
-    [Obsolete]
+    
     protected virtual void Awake()
     {
         if (this != Instance)
@@ -42,7 +42,7 @@ public abstract class SingletonBase<T> : MonoBehaviour where T : MonoBehaviour
         }
         if (dontDestroyOnLoad)
         {
-            DontDestroyOnLoad(this.gameObject);
+            DontDestroyOnLoad(gameObject);
         }
     }
 }

@@ -297,7 +297,6 @@ GameObject:
   m_Component:
   - component: {fileID: 882723848}
   - component: {fileID: 882723847}
-  - component: {fileID: 882723849}
   m_Layer: 0
   m_Name: BGM
   m_TagString: Untagged
@@ -417,18 +416,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &882723849
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 882723846}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d5d96d4f542cd324aaa002176c6b1f28, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &906579392
 GameObject:
   m_ObjectHideFlags: 0
@@ -650,7 +637,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1397812658}
   - component: {fileID: 1397812657}
-  - component: {fileID: 1397812659}
   m_Layer: 0
   m_Name: SoundEffect
   m_TagString: Untagged
@@ -770,18 +756,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1397812659
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1397812656}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 93e12564753cd3c4b8d66a841db896a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1439021600
 GameObject:
   m_ObjectHideFlags: 0
@@ -1074,7 +1048,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ab9950a5d064e046b0d4a0f53044548, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: GameScene
+  sceneName: 
 --- !u!114 &1658847556
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1121,14 +1095,14 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1658847555}
         m_TargetAssemblyTypeName: SceneChange, Assembly-CSharp
-        m_MethodName: OnClick
-        m_Mode: 1
+        m_MethodName: ChangeScene
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: GameScene
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1658847557

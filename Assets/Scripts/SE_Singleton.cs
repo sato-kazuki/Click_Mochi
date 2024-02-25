@@ -13,7 +13,7 @@ public class SE_Singleton : SingletonBase<SE_Singleton>
 
     AudioSource audiosource;
 
-    protected override bool dontDestroyOnLoad => throw new System.NotImplementedException();
+    public override bool dontDestroyOnLoad => throw new System.NotImplementedException();
 
     void Start()
     {
