@@ -9,11 +9,10 @@ using static Unity.Burst.Intrinsics.X86;
 public class SE_Singleton : SingletonBase<SE_Singleton>
 {
     private const string FILE_PATH = "Assets/Audios/";
-    private const string EXTENSION = ".mp3";
 
     AudioSource audiosource;
 
-    public override bool dontDestroyOnLoad => throw new System.NotImplementedException();
+    
 
     void Start()
     {
@@ -23,7 +22,7 @@ public class SE_Singleton : SingletonBase<SE_Singleton>
 
     public async void MusicChange(string musicname)
     {
-        string filename = FILE_PATH + musicname + EXTENSION;
+        string filename = FILE_PATH + musicname;
         AudioClip afterMusic = await Addressables.LoadAssetAsync<AudioClip>(filename).Task;
         Debug.Log(filename);
         if (afterMusic == default)

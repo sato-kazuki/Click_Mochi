@@ -8,12 +8,11 @@ using static Unity.Burst.Intrinsics.X86;
 
 public class BGM_Singleton : SingletonBase<BGM_Singleton>
 {
+    //ファイルパス
     private const string FILE_PATH = "Assets/Audios/";
-    private const string EXTENSION = ".mp3";
 
     AudioSource audiosource;
 
-    public override bool dontDestroyOnLoad => throw new System.NotImplementedException();
 
     void Start()
     {
@@ -21,9 +20,14 @@ public class BGM_Singleton : SingletonBase<BGM_Singleton>
         
     }
 
+    /// <summary>
+    /// BGMを変更する
+    /// 
+    /// </summary>
+    /// <param name="musicname">ファイル名</param>
     public async void MusicChange(string musicname)
     {
-        string filename = FILE_PATH + musicname + EXTENSION;
+        string filename = FILE_PATH + musicname;
         AudioClip afterMusic = await Addressables.LoadAssetAsync<AudioClip>(filename).Task;
         Debug.Log(filename);
         if (afterMusic == default)

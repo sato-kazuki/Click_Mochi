@@ -19,9 +19,9 @@ public class MochiMove : MonoBehaviour
     {
 
         //ƒ‰ƒ“ƒ_ƒ€‚È•ûŒü‚É”ò‚Î‚·
-        float x = Random.Range(-3, 3);
-        while (x == 0) {
-            x = Random.Range(-3, 3);
+        float x = Random.Range(-4, 4);
+        while (x==0) {
+            x = Random.Range(-4, 4);
         }
         rb.AddForce(new Vector2(x, Random.Range(5, 10)), ForceMode2D.Impulse);
         //‰ñ“]‚ð‰Á‚¦‚é
