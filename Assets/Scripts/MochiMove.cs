@@ -9,11 +9,12 @@ public class MochiMove : MonoBehaviour
     public Rigidbody2D rb;
     public Transform mochi;
     public CircleCollider2D circleCollider2D;
+
     public int destroylimit = 8;
 
-    private int destroycount = 0;
-    
     public const float transformSize = 0.01f;
+
+    private int destroycount = 0;
 
     void Start()
     {

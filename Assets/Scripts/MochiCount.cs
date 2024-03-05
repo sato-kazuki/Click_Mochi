@@ -15,13 +15,20 @@ public class MochiCount : MonoBehaviour
     public string mochiCountString2;
 
 
+    private void Start()
+    {
+        ScoreData.getScoreData += AddMochiCount;
+    }
+
+
     /// <summary>
     /// カウントを増やす
     /// </summary>
     public void AddMochiCount()
     {
-        //カウントを増やす
-        mochiCount++;
+
+        //カウントを取得・更新
+        mochiCount = ScoreData.score;
         //テキストを更新
         mochiCountText.text = mochiCountString + mochiCount.ToString() + mochiCountString2;
     }

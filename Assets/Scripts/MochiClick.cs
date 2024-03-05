@@ -7,17 +7,14 @@ public class MochiClick : MonoBehaviour
     //prefab‚ğŠi”[‚·‚é‚½‚ß‚Ì•Ï”
     
     public MochiSpawn mochiSpawn;
-    public MochiCount mochiCount;
+    public int addScore = 1;
+
     /// <summary>
     /// ƒ{ƒ^ƒ“‚ğ‰Ÿ‚µ‚½‚Æ‚«prefab‚ğ¶¬‚·‚é
-    private void Start()
-    {
-
-    }
+    /// </summary>
     public void OnClick()
     {
+        ScoreData.addScore(addScore);
         mochiSpawn.SpawnMochi();
-        mochiCount.AddMochiCount();
-
     }
 }

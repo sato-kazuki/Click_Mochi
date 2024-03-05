@@ -14,7 +14,7 @@ public class BGM_Singleton : SingletonBase<BGM_Singleton>
 
     void Start()
     {
-        audiosource = this.gameObject.GetComponent<AudioSource>();
+        audiosource = gameObject.GetComponent<AudioSource>();
         
     }
 
