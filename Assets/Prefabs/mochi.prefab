@@ -1,5 +1,51 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &6084930131750779116
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2055104552365415041}
+  - component: {fileID: 8119031413095357164}
+  m_Layer: 0
+  m_Name: SpawnPoint_Click
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2055104552365415041
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6084930131750779116}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.368, z: 0}
+  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3637334067859409730}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8119031413095357164
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6084930131750779116}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3cd982f1ba3fe46458ea52c860165458, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mochiPrefab: {fileID: 848977622503833618, guid: e01df1efbfd3a2f4994502b8fc372828, type: 3}
+  autoSpawnInterval: 600
 --- !u!1 &8696914115656607424
 GameObject:
   m_ObjectHideFlags: 0
@@ -13,6 +59,8 @@ GameObject:
   - component: {fileID: 3380024457020569873}
   - component: {fileID: 2954886911286276311}
   - component: {fileID: 1638588150672069514}
+  - component: {fileID: 1692283854853420731}
+  - component: {fileID: 7627971259558611315}
   m_Layer: 0
   m_Name: Mochi
   m_TagString: Untagged
@@ -30,9 +78,10 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0, y: -0.86, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 3.1118479, y: 2.8481042, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 2055104552365415041}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &4702192686624639323
@@ -77,13 +126,13 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 1635755616216721703, guid: a83e17158a4ba5b4fb97ff57854711e7, type: 3}
+  m_SortingOrder: 1
+  m_Sprite: {fileID: 1929896234, guid: 639f4202e5bc46a45b39ecdad7ba939d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.28, y: 1.28}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -119,12 +168,12 @@ CircleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
-  m_Radius: 4.04
+  m_Offset: {x: 0.013448504, y: -0.23491772}
+  m_Radius: 0.3594197
 --- !u!114 &2954886911286276311
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -166,4 +215,43 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2555621c67282f84f96bc25ab35daa77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mochiPrefab: {fileID: 848977622503833618, guid: e01df1efbfd3a2f4994502b8fc372828, type: 3}
+  mochiSpawn: {fileID: 8119031413095357164}
+  addScore: 1
+--- !u!114 &1692283854853420731
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8696914115656607424}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e9a4a392f0f0fc4b89e80f409573076, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mochiCountText: {fileID: 0}
+  mochiCount: 0
+  mochiCountString: "\u4ECA\u306E\u3082\u3061\u3055\u3093\uFF1A"
+  mochiCountString2: "\u3082\u3061"
+--- !u!95 &7627971259558611315
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8696914115656607424}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ec411d27effc65d459914ee0ca0c6478, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

@@ -24,7 +24,7 @@ public class AutoSpawnBase : MonoBehaviour
     {
         //ŠO•”‚©‚ç‹–‰Â‚³‚ê‚é‚Ü‚Å”ñ•\Ž¦‚Ì—\’è
         //gameObject.SetActive(false);
-        cost = 1;
+        cost = 0;
         level = 0;
         score = 0;
         addMagnification = (float)10.0;

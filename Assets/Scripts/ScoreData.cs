@@ -18,6 +18,7 @@ public class ScoreData : MonoBehaviour
         getScoreData.Invoke();
     }
 
+    //inspectorでListを追加・編集するスクリプト
     //[Serializable]
     //public class MochiScore
     //{

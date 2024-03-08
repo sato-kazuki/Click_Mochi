@@ -18,7 +18,7 @@ public class MochiSpawn : MonoBehaviour
 
 
         //ƒ‰ƒ“ƒ_ƒ€‚ÈˆÊ’u‚Éprefab‚ğ¶¬
-        Instantiate(mochiPrefab, new Vector2(x,Random.Range(0, 2)), Quaternion.identity);
+        Instantiate(mochiPrefab, new Vector2(x,Random.Range(-2, 0)), Quaternion.identity);
     }
     private void Update()
     {
