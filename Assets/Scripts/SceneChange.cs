@@ -5,8 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class SceneChange : MonoBehaviour
 {
-    [SerializeField]
+    
     private string sceneName;
+
+    public string SceneName { get => sceneName; set => sceneName = value; }
+
     //ƒV[ƒ“‚ğ‘JˆÚ
     public void ChangeScene(string sceneName)
     {

@@ -14,25 +14,25 @@ public class AutoSpownText : MonoBehaviour
 
     public void Start()
     {
-        costText = "cost:0";
-        levelText = "level:0";
-        pointText = "point 0Mo/s";
+        costText = "ïKóvó :0";
+        levelText = "ãKñÕ:0";
+        pointText = "éYèoó  0g/s";
         autoSpownText.text = costText + "\n" + levelText + "\n" + pointText;
     }
 
     public void CostUp(int cost)
     {
-        costText = "Cost:" + cost.ToString();
+        costText = "ïKóvó :" + cost.ToString();
         autoSpownText.text = costText + "\n" + levelText + "\n" + pointText;
     }
     public void LevelUp(int level)
     {
-        levelText = "Level:" + level.ToString();
+        levelText = "ãKñÕ:" + level.ToString();
         autoSpownText.text = costText + "\n" + levelText + "\n" + pointText;
     }
     public void PointUp(int point)
     {
-        levelText = "point " + point.ToString() + "Mo/s";
+        levelText = "éYèoó  " + point.ToString() + "g/s";
         autoSpownText.text = costText + "\n" + levelText + "\n" + pointText;
     }
 }
