@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -16,22 +17,30 @@ public class SE_Singleton : SingletonBase<SE_Singleton>
 
     void Start()
     {
-        audiosource = this.gameObject.GetComponent<AudioSource>();
+        audiosource = gameObject.GetComponent<AudioSource>();
 
     }
 
-    public async void MusicChange(string musicname)
+    //public async void MusicChange(string musicname)
+    //{
+    //    string filename = FILE_PATH + musicname;
+    //    AudioClip afterMusic = await Addressables.LoadAssetAsync<AudioClip>(filename).Task;
+    //    Debug.Log(filename);
+    //    if (afterMusic == default)
+    //    {
+    //        // defaultであれば、ロードに失敗している
+    //        Debug.LogError("ロードに失敗しました");
+    //        return;
+    //    }
+    //    audiosource.clip = afterMusic;
+    //    audiosource.Play();
+    //    Addressables.Release(afterMusic);
+    //}
+
+    public void SEPlay(AudioClip audioClip)
     {
-        string filename = FILE_PATH + musicname;
-        AudioClip afterMusic = await Addressables.LoadAssetAsync<AudioClip>(filename).Task;
-        Debug.Log(filename);
-        if (afterMusic == default)
-        {
-            // defaultであれば、ロードに失敗している
-            Debug.LogError("ロードに失敗しました");
-        }
-        audiosource.clip = afterMusic;
+        
+        audiosource.clip = audioClip;
         audiosource.Play();
-        Addressables.Release(afterMusic);
     }
 }

@@ -27,12 +27,19 @@ public class ScoreData : MonoBehaviour
     {
         StartCoroutine(RepeatFunction());
     }
-
+    /// <summary>
+    /// スコア加算
+    /// </summary>
+    /// <param name="addscore"></param>
     public static void addScore(int addscore)
     {
         score += addscore;
         getScoreData.Invoke();
     }
+    /// <summary>
+    /// 自動スコア加算総量
+    /// </summary>
+    /// <param name="addscorePerS"></param>
     public static void addScorePerS(int addscorePerS)
     {
         scorePerS += addscorePerS;

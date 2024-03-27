@@ -25,34 +25,22 @@ public class SCScreenImage : MonoBehaviour
         }
         if (screenImagePath.Count <= 0)
         {
-            screenImagePath.Add("ShootingImage");
+            screenImagePath.Add("ShootingSceneImage");
         }
         //sceneChangeにデフォルトの遷移先シーン名とイメージをセット
-        ChangeScreenNum(1);
+        ChangeScreenNum(0);
     }
 
     public void ChangeScreenNum(int num)
     {
-        //sceneChangeにデフォルトの遷移先シーン名をセット
+        //sceneChangeに遷移先シーン名をセット
         sceneChange.SceneName = sceneNames[num];
-        //scScreenChangeにデフォルトのイメージをセット
-        Addressables.LoadAssetAsync<Image>(screenImagePath[num]).Completed += handle =>
+        //scScreenChangeにイメージをセット
+        Addressables.LoadAssetAsync<Sprite>(screenImagePath[num]).Completed += handle =>
         {
-            image = handle.Result;
+            image.sprite = handle.Result;
         };
     }
 
-    /// <summary>
-    /// ScreenImageを受け取った名前で更新する
-    /// </summary>
-    /// <param name="name"></param>
-    public void ChangeImage(string name)
-    {
-        Addressables.LoadAssetAsync<Image>(name).Completed += handle =>
-        {
-            image = handle.Result;
-        };
-        
-        
-    }
+
 }

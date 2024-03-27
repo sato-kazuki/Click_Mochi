@@ -8,9 +8,9 @@ public class AutoSpownText : MonoBehaviour
 {
     //TextMeshProUGUI‚Ì•Ï”‚ğéŒ¾
     public TextMeshProUGUI autoSpownText;
-    public string costText;
-    public string levelText;
-    public string pointText;
+    string costText;
+    string levelText;
+    string pointText;
 
     public void Start()
     {

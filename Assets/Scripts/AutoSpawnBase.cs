@@ -10,8 +10,8 @@ public class AutoSpawnBase : MonoBehaviour
     
     public int level;
 
-    [SerializeField]private float addMagnification;  //倍率
-    [SerializeField] private int costMagnification;  //必要コスト倍率
+    [SerializeField]private float addMagnification;  //加算スコア倍率
+    [SerializeField]private int costMagnification;  //必要コスト倍率
     public float Magnification { get => addMagnification; set => addMagnification = value; }
     public int CostMagnification { get => costMagnification; set => costMagnification = value; }
 
